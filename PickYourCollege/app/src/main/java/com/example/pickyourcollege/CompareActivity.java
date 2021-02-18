@@ -16,6 +16,9 @@ public class CompareActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compare);
 
+        // bind views
+        btnReturn      = (Button) findViewById(R.id.btnReturn);
+
         // set up buttons
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override

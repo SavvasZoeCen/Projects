@@ -10,8 +10,8 @@ import android.widget.EditText;
 
 public class WeightActivity extends AppCompatActivity {
 
-    private Button btnCancel;
-    private Button btnSave;
+    private Button btnCancelWeight;
+    private Button btnSaveWeight;
 
     private EditText txtRankWeight;
     private EditText txtLivingCostWeight;
@@ -25,8 +25,8 @@ public class WeightActivity extends AppCompatActivity {
         setContentView(R.layout.activity_weight);
 
         // bind views
-        btnCancel            = (Button) findViewById(R.id.btnCancel);
-        btnSave              = (Button) findViewById(R.id.btnSave);
+        btnCancelWeight      = (Button) findViewById(R.id.btnCancelWeight);
+        btnSaveWeight        = (Button) findViewById(R.id.btnSaveWeight);
 
         txtRankWeight        = (EditText) findViewById(R.id.txtRankWeight);
         txtLivingCostWeight  = (EditText) findViewById(R.id.txtLivingCostWeight);
@@ -35,14 +35,14 @@ public class WeightActivity extends AppCompatActivity {
         txtDistanceWeight    = (EditText) findViewById(R.id.txtDistanceWeight);
 
         // set up buttons
-        btnCancel.setOnClickListener(new View.OnClickListener() {
+        btnCancelWeight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(WeightActivity.this, MainActivity.class));
             }
         });
 
-        btnSave.setOnClickListener(new View.OnClickListener() {
+        btnSaveWeight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MainActivity.weights[0] = Integer.parseInt(txtRankWeight.getText().toString());
@@ -59,11 +59,11 @@ public class WeightActivity extends AppCompatActivity {
             }
         });
 
-        txtRankWeight.setText(MainActivity.weights[0]);
-        txtLivingCostWeight.setText(MainActivity.weights[1]);
-        txtTuitionWeight.setText(MainActivity.weights[2]);
-        txtScholarshipWeight.setText(MainActivity.weights[3]);
-        txtDistanceWeight.setText(MainActivity.weights[4]);
+        txtRankWeight.setText(String.valueOf(MainActivity.weights[0]));
+        txtLivingCostWeight.setText(String.valueOf(MainActivity.weights[1]));
+        txtTuitionWeight.setText(String.valueOf(MainActivity.weights[2]));
+        txtScholarshipWeight.setText(String.valueOf(MainActivity.weights[3]));
+        txtDistanceWeight.setText(String.valueOf(MainActivity.weights[4]));
 
     }
 }

@@ -133,7 +133,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="330dp"
             android:orientation="horizontal">
 
             <MultiAutoCompleteTextView
@@ -157,7 +157,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/weightsCancelBtn"
+                android:id="@+id/btnCancelWeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -169,7 +169,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/weightsSaveBtn"
+                android:id="@+id/btnSaveWeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
